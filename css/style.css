@@ -1,0 +1,250 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    background-color: #EFFAFA;
+    font-family: "Spartan", sans-serif;
+}
+
+ul{
+    padding-left: 0;
+}
+
+.table .table {
+     background-color: #EFFAFA;
+}
+
+.header {
+    width: 100%;
+    height: 155px;
+    background-image: url(C:\Users\admin\Desktop\project1\images\bg.PNG);
+    background-size: cover;
+    background-position: center;
+    background-color:  #5DA4A4;
+}
+
+.container {
+    max-width: 1190px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+}
+
+.table {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-row-gap: 25px;
+}
+
+.job {
+    width: 100%;
+    height: auto;
+    padding: 35px 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -7px #5DA4A4;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.jobs__rows {
+    display: flex;
+    align-items: center;
+}
+
+.jobs__img {
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.jobs__info {
+    margin-left: 25px;
+    width: auto;
+}
+
+.company {
+    color: #40A5A4;
+    font-size: 14px;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.title {
+    color: BLACK;
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.details {
+    margin: 0;
+    padding: 0;
+}
+
+.details-item {
+    display: inline-block;
+    color: #7B8E8E;
+    font-size: 15px;
+}
+
+.details-item::after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    background-color:  #7B8E8E;
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+.details-item:last-child::after {
+    display: none;
+}
+
+.tag, .close-tag {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #EEF6F6;
+    font-weight: 700;
+    font-size: 14px;
+    color: #5DA4A4;
+    margin: 7.5px 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.close-tag {
+    padding-right: 45px;
+}
+
+.close-tag::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 100%;
+    background-color: #5DA4A4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("https://icons-for-free.com/iconfiles/png/512/remove+icon-1320166863280113920.png");
+    background-position: center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.tag:hover, .tag--active {
+    background-color: #5DA4A4;
+    color: #fff;
+}
+
+.close-tag:hover::after {
+    background-color: #5DA4A4;
+}
+
+/*---------- Search Bar  ----------*/
+.search {
+    width: 100%;
+    height: auto;
+    min-height: 70px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -7px #5DA4A4;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    margin-top: -36px;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    transition: opacity 1s;
+}
+
+.search__hidden {
+    opacity: 0;
+}
+
+.search__clear {
+    margin-left: 50px;
+    border: none;
+    background-color: #5DA4A4;
+    color: #EEF6F6;
+    font-size: 14px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 7.5px 5px;
+    transition: background-color 0.2s;
+}
+
+.search__clear:hover{
+    background-color: #EFFAFA;
+    color:  #5DA4A4;
+}
+
+/*---------- Media Query ----------*/
+@media (max-width: 1120px) {
+    .search {
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+    }
+
+    .search__clear {
+        margin-left: 20px;
+    }
+
+    .table {
+        grid-row-gap: 50px;
+    }
+
+    .job {
+        flex-wrap: wrap;
+    }
+
+    .jobs__info {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .jobs__rows {
+        justify-content: flex-start;
+        flex: 0 1 100%;
+        flex-wrap: wrap;
+    }
+
+    .jobs__all {
+        border-bottom: #ABABAB solid 1px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .jobs__tags {
+        width: 100%;
+        justify-content: flex-start;
+        flex: 0 1 100%;
+        flex-wrap: wrap;
+        margin-left: -5px;
+    }
+
+    .jobs__img {
+        width: 50px;
+        margin-top: calc(-35px - 25px);
+        margin-bottom: 20px;
+    }
+}

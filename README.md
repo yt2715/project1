@@ -1,4 +1,4 @@
-# Project 1
+# Project 1 - Landing Page
 
 ### Description-
 Project is about simple responsive landing page in which we can store details of the users. We can also use the search tags to sort out the users. 
